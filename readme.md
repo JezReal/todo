@@ -1,8 +1,8 @@
-#todo
+# todo
 
 A simple web api using PHP and MySQL database
 
-##Database schema
+## Database schema
 
 **Enter these commands to your mysql shell line by line to create the database and tables**
 
@@ -25,7 +25,7 @@ grant insert, select, update, delete on todo_db.* to default-user'@'localhost';
 ```
 
 
-##Running the api
+## Running the api
 
 To run the api make sure that the directory where you cloned this repo is under the *htdocs* folder of your xampp installation. The default location is at `C:/xampp/htdocs/`
 
@@ -35,7 +35,7 @@ Once you moved the clone repository under the htdocs folder of your xampp instal
 
 Finally, to be able to use the api, the baseurl is `localhost/todo/`. Enter this url in your browser and you should see a text saying something like *Web API*
 
-##Endpoints
+## Endpoints
 
 **login(POST)
 - This endpoint is used to login. Credentials must be passed in the body as a JSON object like so:
