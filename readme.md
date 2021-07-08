@@ -6,15 +6,23 @@ A simple web api using PHP and MySQL database
 
 **Enter these commands to your mysql shell line by line to create the database and tables**
 
-`create database todo_db;`
-`use todo_db;`
-`create table accounts_table (account_id int NOT NULL AUTO_INCREMENT, email varchar(100) NOT NULL, password varchar(500) NOT NULL, PRIMARY KEY(account_id)) Engine=InnoDB, charset=latin1, AUTO_INCREMENT=1;`
-`create table todo_table (todo_id int NOT NULL AUTO_INCREMENT, account_id INT NOT NULL, date date NOT NULL, todo varchar(500) NOT NULL, PRIMARY KEY(todo_id)) Engine=InnoDB, charset=latin1, AUTO_INCREMENT=1;`
+```
+create database todo_db;
+
+use todo_db;
+
+create table accounts_table (account_id int NOT NULL AUTO_INCREMENT, email
+varchar(100) NOT NULL, password varchar(500) NOT NULL, PRIMARY KEY(account_id)) Engine=InnoDB, charset=latin1, AUTO_INCREMENT=1;
+
+create table todo_table (todo_id int NOT NULL AUTO_INCREMENT, account_id INT NOT NULL, date date NOT NULL, todo varchar(500) NOT NULL, PRIMARY KEY(todo_id)) Engine=InnoDB, charset=latin1, AUTO_INCREMENT=1;
+```
 
 **Enter these commands to create the user**
 
-`create user 'default-user'@'localhost';`
-`grant insert, select, update, delete on todo_db.* to 'default-user'@'localhost';`
+```
+create user 'default-user'@'localhost';
+grant insert, select, update, delete on todo_db.* to default-user'@'localhost';
+```
 
 
 ##Running the api
