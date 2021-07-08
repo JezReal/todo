@@ -8,12 +8,18 @@ A simple web api using PHP and MySQL database
 
 ```
 create database todo_db;
+```
 
+```
 use todo_db;
+```
 
+```
 create table accounts_table (account_id int NOT NULL AUTO_INCREMENT, email
 varchar(100) NOT NULL, password varchar(500) NOT NULL, PRIMARY KEY(account_id)) Engine=InnoDB, charset=latin1, AUTO_INCREMENT=1;
+```
 
+```
 create table todo_table (todo_id int NOT NULL AUTO_INCREMENT, account_id INT NOT NULL, date date NOT NULL, todo varchar(500) NOT NULL, PRIMARY KEY(todo_id)) Engine=InnoDB, charset=latin1, AUTO_INCREMENT=1;
 ```
 
@@ -21,6 +27,9 @@ create table todo_table (todo_id int NOT NULL AUTO_INCREMENT, account_id INT NOT
 
 ```
 create user 'default-user'@'localhost';
+```
+
+```
 grant insert, select, update, delete on todo_db.* to default-user'@'localhost';
 ```
 
@@ -37,7 +46,7 @@ Finally, to be able to use the api, the baseurl is `localhost/todo/`. Enter this
 
 ## Endpoints
 
-**login(POST)
+**login(POST)**
 - This endpoint is used to login. Credentials must be passed in the body as a JSON object like so:
 
 ```javascript
@@ -48,7 +57,7 @@ Finally, to be able to use the api, the baseurl is `localhost/todo/`. Enter this
 ```
 
 
-**register(POST)
+**register(POST)**
 - This endpoint is used to register a new account. Just like in the login endpoint, you must pass the user credentials in the body of the request like so:
 
 ```javascript
@@ -59,7 +68,7 @@ Finally, to be able to use the api, the baseurl is `localhost/todo/`. Enter this
 ```
 
 
-**todos(GET)
+**todos(GET)**
 - This endpoint displays all of todos of a given account. You need to pass the account id as a JSON object in the body of the request like so:
 
 ```javascript
@@ -69,7 +78,7 @@ Finally, to be able to use the api, the baseurl is `localhost/todo/`. Enter this
 ```
 
 
-**inserttodo(POST)
+**inserttodo(POST)**
 - This endpoint allows you to add a todo for a given account. You need to pass the todo as a JSON object in the body of the request like so:
 
 ```javascript
@@ -81,7 +90,7 @@ Finally, to be able to use the api, the baseurl is `localhost/todo/`. Enter this
 ```
 
 
-**updatetodo(PUT)
+**updatetodo(PUT)**
 - This endpoint is used to update an existing todo item. You need to pass the `todo_id`, `date` and `todo` in the body of the request as a JSON object like so:
 
 ```javascript
@@ -93,7 +102,7 @@ Finally, to be able to use the api, the baseurl is `localhost/todo/`. Enter this
 ```
 
 
-**deletetodo(DELETE)
+**deletetodo(DELETE)**
 - This endpoint is used to delete an existing todo item. You need to pass the id of the todo in the body of the request as a JSON object like so:
 
 ```javascript
