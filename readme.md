@@ -15,12 +15,11 @@ use todo_db;
 ```
 
 ```
-create table accounts_table (account_id int NOT NULL AUTO_INCREMENT, email
-varchar(100) NOT NULL, password varchar(500) NOT NULL, PRIMARY KEY(account_id)) Engine=InnoDB, charset=latin1, AUTO_INCREMENT=1;
+create table accounts_table (account_id int NOT NULL AUTO_INCREMENT, email varchar(100) NOT NULL, password varchar(500) NOT NULL, PRIMARY KEY(account_id)) Engine=InnoDB, charset=latin1, AUTO_INCREMENT=1;
 ```
 
 ```
-create table todo_table (todo_id int NOT NULL AUTO_INCREMENT, account_id INT NOT NULL, date date NOT NULL, todo varchar(500) NOT NULL, PRIMARY KEY(todo_id)) Engine=InnoDB, charset=latin1, AUTO_INCREMENT=1;
+create table todo_table (todo_id int NOT NULL AUTO_INCREMENT, account_id INT NOT NULL, date date NOT NULL, todo varchar(500) NOT NULL PRIMARY KEY(todo_id)) Engine=InnoDB, charset=latin1, AUTO_INCREMENT=1;
 ```
 
 **Enter these commands to create the user**
