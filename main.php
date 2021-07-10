@@ -37,6 +37,21 @@ $delete = new Delete($pdo);
                     $d = json_decode(file_get_contents("php://input")); 
 					echo json_encode($post->insertTodo($d));
                 break;
+
+                case 'todos':
+                    $d = json_decode(file_get_contents("php://input")); 
+					echo json_encode($get->getAllTodos($d));
+                break;
+
+                case 'updatetodo':
+                    $d = json_decode(file_get_contents("php://input")); 
+					echo json_encode($put->updateTodo($d));
+                break;
+
+                case 'deletetodo':
+                    $d = json_decode(file_get_contents("php://input")); 
+					echo json_encode($delete->deleteTodo($d));
+                break;
        
             default: 
                 echo "no endpoint";
@@ -44,34 +59,6 @@ $delete = new Delete($pdo);
         }
         break;
         
-        // get all todos
-        case 'GET':
-            switch ($req[0]){
-                case 'todos':
-                    $d = json_decode(file_get_contents("php://input")); 
-					echo json_encode($get->getAllTodos($d));
-                break;
-            }
-            break;
-
-        case 'PUT':
-            switch ($req[0]){
-                case 'updatetodo':
-                    $d = json_decode(file_get_contents("php://input")); 
-					echo json_encode($put->updateTodo($d));
-                break;
-            }
-            break;
-
-        case 'DELETE':
-            switch ($req[0]){
-                case 'deletetodo':
-                    $d = json_decode(file_get_contents("php://input")); 
-					echo json_encode($delete->deleteTodo($d));
-                break;
-            }
-            break;
-
         default: 
             echo "prohibited";
         break;
