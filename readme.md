@@ -67,7 +67,7 @@ Finally, to be able to use the api, the baseurl is `localhost/todo/`. Enter this
 ```
 
 
-**todos(GET)**
+**todos(POST)**
 - This endpoint displays all of todos of a given account. You need to pass the account id as a JSON object in the body of the request like so:
 
 ```javascript
@@ -89,7 +89,7 @@ Finally, to be able to use the api, the baseurl is `localhost/todo/`. Enter this
 ```
 
 
-**updatetodo(PUT)**
+**updatetodo(POST)**
 - This endpoint is used to update an existing todo item. You need to pass the `todo_id`, `date` and `todo` in the body of the request as a JSON object like so:
 
 ```javascript
@@ -101,7 +101,7 @@ Finally, to be able to use the api, the baseurl is `localhost/todo/`. Enter this
 ```
 
 
-**deletetodo(DELETE)**
+**deletetodo(POST)**
 - This endpoint is used to delete an existing todo item. You need to pass the id of the todo in the body of the request as a JSON object like so:
 
 ```javascript
